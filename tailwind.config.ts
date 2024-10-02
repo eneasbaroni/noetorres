@@ -12,6 +12,13 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        dm: ["var(--font-dm)"],
+        cormorant: ["var(--font-cormorant)"],
+      },
+      minHeight: {
+        section: "calc(100vh - 50px - 16px)",
+      }
     },
   },
   plugins: [],
