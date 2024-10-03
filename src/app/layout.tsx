@@ -38,7 +38,7 @@ export const metadata: Metadata = {
 	}>) {
 		return (
 			<html lang="es" className={`${dmSans.variable} ${cormorantGaramond.variable}`}>
-				<body className="font-dm px-16 pt-4">
+				<body className="font-dm px-16 pt-10">
 					<Header/>
 					{children}
 				</body>

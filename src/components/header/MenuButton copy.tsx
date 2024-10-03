@@ -1,37 +1,43 @@
 'use client'
-import { motion, Variants} from "framer-motion";
-import { useState } from "react";
+import { motion, animate, motionValue } from "framer-motion";
+import { useEffect, useState } from "react";
 
 
 
 const MenuButton = ({ foo }: { foo: () => void }) => {
 
     const [isHover, setIsHover] = useState(false)
-    const [open, setOpen] = useState(false)  
+    const [open, setOpen] = useState(false)
+    const [monted, setMonted] = useState(false) //para evitar movimiento inical al montar el componente
 
-    const pathAnim = {
-        initial: {
-            d: "m 0 15 l 50 0 m -50 20 l 50 0",
-            transition: {
-                duration: 0.5,
-                ease: [0.76, 0, 0.24, 1]
-            }
-        },
-        animate: {
-            d: "m 10 10 l 30 30 m -30 0 l 30 -30",
-            transition: {
-                duration: 0.5,
-                ease: [0.76, 0, 0.24, 1]
-            }
-        },
-    }
+    useEffect(() => {
+        setMonted(true)
+    }, [])
+
+
+    const d = motionValue("m 0 15 l 50 0 m -50 20 l 50 0")
+
+    useEffect(() => {
+
+        if (open && monted) {
+            animate(d, ["m 0 15 l 50 0 m -50 20 l 50 0", "m 10 10 l 30 30 m -30 0 l 30 -30"], { duration: 0.5 })
+            /* animate(stroke, ['white', 'black'], { duration: 0.2, delay: 0.1 }) */
+        }
+        if (!open && monted) {
+            animate(d, ["m 10 10 l 30 30 m -30 0 l 30 -30", "m 0 15 l 50 0 m -50 20 l 50 0"], { duration: 0.5 })
+            /* animate(stroke, ['black', 'white'], { duration: 0.2, delay: 0.8 }) */
+        }
+
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [open])
+    
 
     const handleClick = () => {
         foo()
         setOpen(!open)
     }
 
-    const bgAnim: Variants = {
+    const bgAnim = {
         initial: {
             height: '0px',
             width: '0px',
@@ -41,8 +47,8 @@ const MenuButton = ({ foo }: { foo: () => void }) => {
             }
         },
         animate: {
-            height: '80px',
-            width: '80px',
+            height: '64px',
+            width: '64px',
             transition: {
                 duration: 0.5,
                 ease: [0.76, 0, 0.24, 1]
@@ -53,7 +59,7 @@ const MenuButton = ({ foo }: { foo: () => void }) => {
 
     return (
         <div className="relative">
-            <motion.div className="absolute bg-white mix-blend-difference w-16 h-16 rounded-full top-0 left-0 translate-x-[-50%] translate-y-[-50%] z-20"
+            <motion.div className="absolute bg-black invert w-16 h-16 rounded-full top-0 left-0 translate-x-[-50%] translate-y-[-50%] z-20"
                 variants={bgAnim}
                 animate={isHover ? "animate" : "initial"}
                 initial="initial"
@@ -63,9 +69,7 @@ const MenuButton = ({ foo }: { foo: () => void }) => {
                 <motion.path
                     stroke={'white'}
                     strokeWidth={2}
-                    variants={pathAnim}
-                    animate={open ? "animate" : "initial"}
-                    initial="initial"
+                    d={d}
                 ></motion.path>
             </motion.svg>
         </div>

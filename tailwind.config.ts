@@ -17,7 +17,7 @@ const config: Config = {
         cormorant: ["var(--font-cormorant)"],
       },
       minHeight: {
-        section: "calc(100vh - 50px - 16px)",
+        section: "calc(100vh - 50px - 40px)",
       }
     },
   },
