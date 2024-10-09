@@ -3,6 +3,8 @@ import { DM_Sans, Cormorant_Garamond } from 'next/font/google'
 import "./globals.css";
 import Header from "@/components/header/Header";
 
+
+
 const dmSans = DM_Sans({
 	subsets: ['latin'],
 	variable: '--font-dm',

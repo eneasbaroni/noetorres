@@ -5,6 +5,7 @@ const config: Config = {
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/sections/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
@@ -17,7 +18,7 @@ const config: Config = {
         cormorant: ["var(--font-cormorant)"],
       },
       minHeight: {
-        section: "calc(100vh - 50px - 40px)",
+        section: "calc(100vh - 40px - 40px)",
       }
     },
   },

@@ -7,4 +7,4 @@ const anim = (variants: AnimationProps["variants"]) => ({
     variants,
 }); 
 
-export {anim}
+export { anim }

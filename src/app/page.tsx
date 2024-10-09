@@ -1,9 +1,11 @@
+import AboutSection from "@/sections/About/About"
+import HomeSection from "@/sections/Home/Home"
+
 const Home = () => {
   return (
-    <main className="w-full min-h-section flex justify-center items-end">
-      <section className="w-full flex justify-center overflow-hidden">
-        <h1 className="text-[20rem] font-black leading-[15rem]" >NOELIA TORRES<span className="text-5xl"> Comunty Manager</span></h1>
-      </section>
+    <main className="w-full  flex flex-col justify-center items-end">
+      <HomeSection/>
+      <AboutSection/>
     </main>
   )
 }

@@ -1,13 +1,13 @@
 'use client'
-import { motion, Variants} from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { useState } from "react";
 
 
 
-const MenuButton = ({ foo }: { foo: () => void }) => {
+const MenuButton = ({ foo, menuOpne }: { foo: () => void, menuOpne: boolean }) => {
 
     const [isHover, setIsHover] = useState(false)
-    const [open, setOpen] = useState(false)  
+    
 
     const pathAnim = {
         initial: {
@@ -28,7 +28,7 @@ const MenuButton = ({ foo }: { foo: () => void }) => {
 
     const handleClick = () => {
         foo()
-        setOpen(!open)
+        //setOpen(!open)
     }
 
     const bgAnim: Variants = {
@@ -52,7 +52,7 @@ const MenuButton = ({ foo }: { foo: () => void }) => {
 
 
     return (
-        <div className="relative">
+        <div className="fixed w-8 h-auto right-[64px] z-40 mix-blend-difference">
             <motion.div className="absolute bg-white mix-blend-difference w-16 h-16 rounded-full top-0 left-0 translate-x-[-50%] translate-y-[-50%] z-20"
                 variants={bgAnim}
                 animate={isHover ? "animate" : "initial"}
@@ -64,7 +64,7 @@ const MenuButton = ({ foo }: { foo: () => void }) => {
                     stroke={'white'}
                     strokeWidth={2}
                     variants={pathAnim}
-                    animate={open ? "animate" : "initial"}
+                    animate={menuOpne ? "animate" : "initial"}
                     initial="initial"
                 ></motion.path>
             </motion.svg>

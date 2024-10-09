@@ -17,13 +17,13 @@ const Header = () => {
     }
 
     return (
-        <header className="w-full flex items-center justify-between">
+        <header className="w-full h-[40px] flex items-center justify-between">
             {/* <Image src="/images/logo.svg" alt="logo" width={36} height={36} className="mix-blend-difference invert z-20" /> */}
             <Image src="/images/logoB.svg" alt="logo" width={50} height={50} className="mix-blend-difference invert z-20" />
             
-            <MenuButton foo={handleClick}/>
+            <MenuButton foo={handleClick} menuOpne={menuOpen}/>
             <AnimatePresence>
-                {menuOpen && <Menu/>}
+                {menuOpen && <Menu foo={handleClick}/>}
             </AnimatePresence>
         </header>
     )
