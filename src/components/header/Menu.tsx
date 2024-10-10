@@ -1,24 +1,49 @@
 import { motion, Variants } from "framer-motion"
 import { anim } from "../../lib/definitions"
 import { MouseEvent } from "react"
+import {easingConfig} from "../../lib/helpers"
 
 const Menu = ({ foo }: { foo: () => void }) => {
     const menuAnim: Variants = {
         initial: {
             y: '-100vh',
+            height: '60vh'
         },
         enter: {
             y: '0vh',
+            height: '100vh',
             transition: {
                 duration: 1,
-                ease: 'easeInOut'
+                ease: easingConfig
             }
         },
         exit: {
             y: '-100vh',
+            height: '60vh',
             transition: {
                 duration: 1,
-                ease: 'easeInOut',
+                ease: easingConfig,
+                delay: 0.5
+            }
+        }
+    }
+
+    const footAnim: Variants = {
+        initial: {
+            d: `m 0 0 q ${window.innerWidth / 2} ${window.innerHeight * 0.40} ${window.innerWidth} 0 l -${window.innerWidth} 0`
+        },
+        enter: {
+            d: `m 0 0 q ${window.innerWidth / 2} 0 ${window.innerWidth} 0 l -${window.innerWidth} 0`,
+            transition: {
+                duration: 1,
+                ease: easingConfig
+            }
+        },
+        exit: {
+            d: [`m 0 0 q ${window.innerWidth / 2} ${window.innerHeight * 0.40} ${window.innerWidth} 0 l -${window.innerWidth} 0`, `m 0 0 q ${window.innerWidth / 2} 0 ${window.innerWidth} 0 l -${window.innerWidth} 0`],
+            transition: {
+                duration: 1,
+                ease: easingConfig,
                 delay: 0.5
             }
         }
@@ -87,6 +112,14 @@ const Menu = ({ foo }: { foo: () => void }) => {
             <motion.li className="relative overflow-hidden h-12 w-full"> <motion.a href="" className="absolute w-full text-center top 0" {...anim(liAnim)}> WORKS </motion.a></motion.li>
             <motion.li className="relative overflow-hidden h-12 w-full"> <motion.a href="" className="absolute w-full text-center top 0" {...anim(liAnim)}> CONTACT </motion.a></motion.li>  */}
             </ul>
+
+            <motion.svg className='w-screen'>
+                <motion.path
+                fill={'white'}
+                {...anim(footAnim)}
+                ></motion.path>
+
+            </motion.svg>
 
         </motion.nav>
     )
