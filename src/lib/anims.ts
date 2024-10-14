@@ -16,4 +16,20 @@ const elementAnim: Variants = {
     }
 }
 
-export { elementAnim }
+const dataAnim: Variants = {
+    init : {
+        y: 20,
+        opacity: 0,
+    },
+    animate: {
+        y: 0,
+        opacity: 1,
+        transition: {
+            duration: 0.5,
+            delay: 0.3,
+        }
+        
+    }
+}
+
+export { elementAnim , dataAnim }
