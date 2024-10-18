@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { DM_Sans, Cormorant_Garamond } from 'next/font/google'
 import "./globals.css";
+import './borrar/ScrollDiv.css'
 import Header from "@/components/header/Header";
 
 

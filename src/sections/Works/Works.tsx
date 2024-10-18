@@ -1,12 +1,26 @@
 'use client'
 import { motion, useTransform, useScroll, Variants} from "framer-motion"
-import { useRef } from "react"
+import { useEffect, useRef } from "react"
 import data from "@/data/data"
 import { elementAnim } from "@/lib/anims"
 import {easingConfig} from "../../lib/helpers"
+import Lenis from "lenis"
 
-const WorksSection = () => {
+const WorksSection = () => {    
     const sectionRef = useRef<HTMLDivElement>(null)
+
+    useEffect(() => {
+        const lenis = new Lenis()
+
+        function raf(time:number) {
+            lenis.raf(time)
+            requestAnimationFrame(raf)
+        }
+        
+        requestAnimationFrame(raf)
+
+    }, [])
+
     const { scrollYProgress } = useScroll({
         target: sectionRef
     })
