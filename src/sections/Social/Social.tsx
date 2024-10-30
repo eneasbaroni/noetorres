@@ -31,10 +31,10 @@ const SocialSection = () => {
                 Social Media WORKS
             </motion.h2>
             <div className="w-full h-auto flex items-center justify-between">
-                <div className="w-1/2 flex flex-col border-b border-white/50 ">
+                <div className="w-1/2 flex flex-col border-b border-neutral-950/50 ">
                     {data.map((item, index) => (
                         <div key={index} 
-                        className="w-full border-t border-white/50 h-20 flex flex-col items-start justify-center"
+                        className="w-full border-t border-neutral-950/50 h-20 flex flex-col items-start justify-center"
                         onClick={() => handleActalWork(index)}
                         onMouseEnter={() => handleActalWork(index)}
                         >
@@ -49,9 +49,7 @@ const SocialSection = () => {
                                         ))}
                                     </div>
                                 </div>
-                                <Image src='/images/works/arrow.svg' alt='arrow' width={15} height={15}
-                                    className="invert"
-                                />
+                                <Image src='/images/works/arrow.svg' alt='arrow' width={15} height={15}/>
                             </div>
                             
                         </div>

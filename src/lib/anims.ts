@@ -1,6 +1,30 @@
 import { Variants } from "framer-motion"
 import { easingConfig } from "./helpers"
 
+
+const liAnim: Variants = {
+    initial: {
+        y: 45,
+        fontVariationSettings: `"wght" 400`
+    },
+    enter: (index: number) => ({
+        y: 0,
+        transition: {
+            duration: 0.5,
+            /* delay: 1   */
+            delay: 1 + (index * 0.1)
+        },
+    }),
+
+    exit: {
+        y: 45,
+        fontVariationSettings: `"wght" 400`,
+        transition: {
+            duration: 0.5
+        }
+    }
+}
+
 const elementAnim: Variants = {
     init : {
         x: 20,
@@ -55,4 +79,4 @@ const worksImgAnim: Variants = {
     }
 }
 
-export { elementAnim , dataAnim, worksImgAnim }
+export { elementAnim , dataAnim, worksImgAnim, liAnim }

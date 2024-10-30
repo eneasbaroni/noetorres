@@ -100,12 +100,12 @@ const Menu = ({ foo }: { foo: () => void }) => {
 
 
     return (
-        <motion.nav className="fixed h-screen w-screen bg-white top-0 left-0 z-10"
+        <motion.nav className="fixed h-screen w-screen bg-neutral-950 top-0 left-0 z-10 "
             {...anim(menuAnim)}
         >
-            <ul className="h-full flex flex-col gap-4 p-4 items-center justify-center [&>li]:text-black [&>li]:text-3xl">
+            <ul className="h-full flex flex-col gap-4 p-4 items-center justify-center [&>li]:text-black [&>li]:text-3xl ">
                 {links.map((link, index) => (
-                    <motion.li key={index} className="relative overflow-hidden h-12 w-full" onClick={(e) => hangleClick(e, link.href)}> <motion.a href={link.href} custom={index} className="absolute w-full text-center top 0" {...anim(liAnim)} whileHover={{fontVariationSettings: `"wght" 900`,  transition: { duration: 0.5 }}}> {link.name}</motion.a></motion.li>
+                    <motion.li key={index} className="relative overflow-hidden h-12 w-full" onClick={(e) => hangleClick(e, link.href)}> <motion.a href={link.href} custom={index} className="absolute w-full text-center text-neutral-50 top 0" {...anim(liAnim)} whileHover={{fontVariationSettings: `"wght" 900`,  transition: { duration: 0.5 }}}> {link.name}</motion.a></motion.li>
                 ))}
                 {/* <motion.li className="relative overflow-hidden h-12 w-full"> <motion.a href="" className="absolute w-full text-center top 0" {...anim(liAnim)}> HOME </motion.a></motion.li>
             <motion.li className="relative overflow-hidden h-12 w-full"> <motion.a href="" className="absolute w-full text-center top 0" {...anim(liAnim)}> ABOUT </motion.a></motion.li>
@@ -115,7 +115,7 @@ const Menu = ({ foo }: { foo: () => void }) => {
 
             <motion.svg className='w-screen'>
                 <motion.path
-                fill={'white'}
+                fill={'#0a0a0a'}
                 {...anim(footAnim)}
                 ></motion.path>
 
