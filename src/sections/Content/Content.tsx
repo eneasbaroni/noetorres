@@ -6,14 +6,14 @@ import data from "@/data/data"
 
 const ContentSection = () => {
   return (
-    <section id="socila" className="min-h-section h-auto w-full flex flex-col items-start justify-between mt-36" >
+    <section id="socila" className="min-h-section h-auto w-full flex flex-col items-start justify-between mt-36 snap-start" >
         <motion.h2 
-                className="w-1/2 text-6xl font-black"
+                className="w-auto text-6xl mt-20 mb-10"
                 variants={elementAnim}
                 initial="init"
                 whileInView="animate"
             >
-                Content Creator <br/> WORKS
+                Content Creator WORKS
             </motion.h2>
             <div className="w-full flex h-[70vh] border-r ">
                 <div className="w-1/4 h-full border-t border-l border-b overflow-hidden ">

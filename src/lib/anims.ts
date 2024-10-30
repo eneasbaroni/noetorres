@@ -35,10 +35,10 @@ const dataAnim: Variants = {
 
 const worksImgAnim: Variants = {
     init : {
-        x: '-100%',       
+        x: '-101%',       
     },
     animate: {
-        x: ['-100%','0%'],
+        x: ['-101%','0%'],
         transition: {
             duration: 0.5,
             delay: 0.3,
@@ -47,7 +47,7 @@ const worksImgAnim: Variants = {
         
     },
     exit: {
-        x: '100%',
+        x: '101%',
         transition: {
             duration: 0.3,
         }

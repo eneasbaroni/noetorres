@@ -66,7 +66,7 @@ const WorksSection = () => {
 
 
     return (
-        <section ref={sectionRef} id="works" className="h-[300vh] relative w-full">
+        <section ref={sectionRef} id="works" className="h-[300vh] relative w-full snap-start">
             {/* <motion.h2 
                 className="w-1/4 text-6xl font-black"
                 variants={elementAnim}

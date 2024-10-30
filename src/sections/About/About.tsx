@@ -9,10 +9,10 @@ elementAnimB.animate.transition.delay = 0.7
 
 const AboutSection = () => {
     return (
-        <section id="about" className="min-h-screen w-full flex items-center justify-between" >
+        <section id="about" className="min-h-screen w-full flex items-center justify-between snap-start" >
                
             <motion.h2 
-                className="w-1/4 text-6xl font-black"
+                className="w-1/4 text-6xl"
                 variants={elementAnim}
                 initial="init"
                 whileInView="animate"

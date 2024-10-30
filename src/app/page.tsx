@@ -6,13 +6,12 @@ import WorksSection from "@/sections/Works/Works"
 
 const Home = () => {
   return (
-    <main className="w-full  flex flex-col justify-center items-end">
+    <main className="w-full flex flex-col justify-center items-end px-16">
       <HomeSection/>
       <AboutSection/>
-      <WorksSection/>
+      {/* <WorksSection/> */}
       <SocialSection/>
       <ContentSection/>
-      <div className="h-screen"></div>
     </main>
   )
 }

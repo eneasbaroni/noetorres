@@ -42,7 +42,7 @@ const HomeSection = () => {
 	}
 
 	return (
-		<section id="home" className="min-h-section w-full flex justify-start items-end overflow-hidden">
+		<section id="home" className="min-h-section w-full flex justify-start items-end overflow-hidden snap-start">
 			<div>
 				<div className="overflow-hidden relative">
 					<motion.h2 

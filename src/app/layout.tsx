@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import { DM_Sans, Cormorant_Garamond } from 'next/font/google'
+import { DM_Sans, Cormorant_Garamond, Newsreader } from 'next/font/google'
 import "./globals.css";
 import './borrar/ScrollDiv.css'
 import Header from "@/components/header/Header";
+import Footer from "@/components/footer/Footer";
 
 
 
@@ -15,6 +16,12 @@ const cormorantGaramond = Cormorant_Garamond({
 	subsets: ['latin'],
 	weight: ['300', '400', '500', '600', '700'],
 	variable: '--font-cormorant',
+}) //ver archivo tailwind.config.ts
+
+const newsreader = Newsreader({
+	subsets: ['latin'],
+	weight: ['300', '400', '500', '600', '700'],
+	variable: '--font-newsreader',
 }) //ver archivo tailwind.config.ts
 
 export const metadata: Metadata = {
@@ -39,11 +46,12 @@ export const metadata: Metadata = {
 	}: Readonly<{
 		children: React.ReactNode;
 	}>) {
-		return (
-			<html lang="es" className={`${dmSans.variable} ${cormorantGaramond.variable}`}>
-				<body className="font-dm px-16 pt-10">
+		return (			
+			<html lang="es" className={`${dmSans.variable} ${cormorantGaramond.variable} ${newsreader.variable} overflow-y-scroll`}>
+				<body className="font-dm pt-10">
 					<Header/>
 					{children}
+					<Footer/>
 				</body>
 			</html>
 		);

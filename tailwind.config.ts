@@ -16,10 +16,11 @@ const config: Config = {
       fontFamily: {
         dm: ["var(--font-dm)"],
         cormorant: ["var(--font-cormorant)"],
+        newsreader:["var(--font-newsreader)"],
       },
       minHeight: {
         section: "calc(100vh - 40px - 40px)",
-      }
+      },
     },
   },
   plugins: [],
