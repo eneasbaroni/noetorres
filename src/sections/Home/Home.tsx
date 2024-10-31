@@ -46,14 +46,14 @@ const HomeSection = () => {
 			<div>
 				<div className="overflow-hidden relative">
 					<motion.h2 
-						className="abosolute text-[10vw] font-black leading-[9vw]" 
+						className="abosolute text-[10vw] leading-[9vw]" 
 						{...anim(h2Anim)}
 						>NOELIA
 					</motion.h2>
 				</div>
 				<div className="overflow-hidden relative">
 					<motion.h2 
-						className="abosolute text-[10vw] font-black leading-[9vw]" 
+						className="abosolute text-[10vw] leading-[9vw]" 
 						{...anim(h2AnimB)}
 						>TORRES
 					</motion.h2>

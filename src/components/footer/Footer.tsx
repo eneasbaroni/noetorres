@@ -29,7 +29,7 @@ const Footer = () => {
 				<div className="w-auto flex flex-col gap-2 [&>a]:text-3xl">
 					{footerLinks.map((item, index) => <motion.a key={index} href={item.url} className="text-neutral-950 text-right" {...anim(liAnim)} whileHover={{fontVariationSettings: `"wght" 900`}}>{item.name}</motion.a>)}
 				</div>
-			</div>8
+			</div>
 		</footer>
 	)
 }	
