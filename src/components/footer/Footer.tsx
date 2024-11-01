@@ -19,10 +19,10 @@ const Footer = () => {
 		offset: ['start end', 'start start']
 	})
 
-	const borderRadius = useTransform(scrollYProgress, [0, 1], ['0rem', '10rem'])
+	const borderRadius = useTransform(scrollYProgress, [0.5, 1], ['0rem', '10rem'])
 
 	return (
-		<footer className="w-full h-screen flex flex-col bg-[url('/images/footer.svg')] bg-cover ">
+		<footer className="w-full min-h-screen flex flex-col bg-[url('/images/footer.svg')] bg-cover overflow-y-hidden ">
 			<motion.div ref={divRef} className="w-full h-64 bg-orange-50 shadow-sm" style={{ borderBottomLeftRadius: borderRadius, borderBottomRightRadius: borderRadius }}></motion.div>
 			<div className="w-full h-[calc(100vh-16rem)] flex justify-between items-end px-16">
 				<h3 className="w-auto text-center text-neutral-900 text-8xl font-light tracking-tighter ">Noelia Torres</h3>

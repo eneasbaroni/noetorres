@@ -17,6 +17,7 @@ const config: Config = {
         dm: ["var(--font-dm)"],
         cormorant: ["var(--font-cormorant)"],
         newsreader:["var(--font-newsreader)"],
+        neueMetana:["var(--font-neuemetana)"]
       },
       minHeight: {
         section: "calc(100vh - 40px - 40px)",

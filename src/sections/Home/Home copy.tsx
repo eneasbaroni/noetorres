@@ -42,16 +42,8 @@ const HomeSection = () => {
 	}
 
 	return (
-		<section id="home" className="min-h-section w-auto m-auto flex flex-col gap-6 justify-end items-start overflow-hidden snap-start">
-
+		<section id="home" className="min-h-section w-full flex justify-start items-end overflow-hidden snap-start">
 			<div>
-				<h2 className="pl-4 text-[1.5vw] leading-[1.5vw]">Content Creator &<br/>Comunty Manager</h2>
-			</div>
-			<h1 className="text-[10vw] text-center leading-[8vw] font-neueMetana tracking-tighter">
-				NOELIA TORRES
-			</h1>
-
-			{/* <div>
 				<div className="overflow-hidden relative">
 					<motion.h2 
 						className="abosolute text-[10vw] leading-[9vw] font-neueMetana" 
@@ -66,8 +58,8 @@ const HomeSection = () => {
 						>TORRES
 					</motion.h2>
 				</div>
-			</div> */}
-			{/* <div><motion.h3 className="text-[2.5vw] leading-[2.5vw]" {...anim(h3Anim)}>Comunty Manager <br/> Content Creator</motion.h3></div> */}
+			</div>
+			<div><motion.h3 className="text-[2.5vw] leading-[2.5vw]" {...anim(h3Anim)}>Comunty Manager <br/> Content Creator</motion.h3></div>
 			{/* <motion.h1 className="text-[16vw] font-black leading-[13vw]"
 				variants={h1Anim}
 				initial="init"

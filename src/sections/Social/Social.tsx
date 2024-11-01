@@ -21,7 +21,7 @@ const SocialSection = () => {
 
 
     return (
-        <section id="socila" className="min-h-section h-auto w-full flex flex-col items-start justify-between snap-start" >
+        <section id="social" className="min-h-section h-auto w-full flex flex-col items-start justify-between snap-start" >
             <motion.h2 
                 className="w-auto text-6xl mt-20"
                 variants={elementAnim}

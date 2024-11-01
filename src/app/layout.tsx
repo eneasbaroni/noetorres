@@ -5,6 +5,9 @@ import './borrar/ScrollDiv.css'
 import Header from "@/components/header/Header";
 import Footer from "@/components/footer/Footer";
 
+//local fonts
+import localFont from 'next/font/local'
+
 
 
 const dmSans = DM_Sans({
@@ -24,6 +27,11 @@ const newsreader = Newsreader({
 	variable: '--font-newsreader',
 }) //ver archivo tailwind.config.ts
 
+const neueMetana = localFont({ 
+	src: '../fonts/neuemetana.otf',
+	variable: '--font-neuemetana',
+ })
+
 export const metadata: Metadata = {
 	title: "Noelia Torres",
 	description: "Noelia Torres, community manager y copywriter con sólida experiencia y trayectoria en la gestion de redes sociales.",
@@ -35,7 +43,7 @@ export const metadata: Metadata = {
 		siteName: "Noelia Torres",
 		images: [
 			{
-				url: "/images/Logo.png"
+				url: "/images/Logo.png" 
 			}
 		]
 	}
@@ -47,7 +55,7 @@ export const metadata: Metadata = {
 		children: React.ReactNode;
 	}>) {
 		return (			
-			<html lang="es" className={`${dmSans.variable} ${cormorantGaramond.variable} ${newsreader.variable} overflow-y-scroll`}>
+			<html lang="es" className={`${dmSans.variable} ${cormorantGaramond.variable} ${newsreader.variable} ${neueMetana.variable} overflow-y-scroll`}>
 				<body className="font-dm pt-10">
 					<Header/>
 					{children}

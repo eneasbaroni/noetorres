@@ -6,7 +6,7 @@ import data from "@/data/data"
 
 const ContentSection = () => {
   return (
-    <section id="socila" className="min-h-section h-auto w-full flex flex-col items-start justify-between mt-36 snap-start" >
+    <section id="content" className="min-h-section h-auto w-full flex flex-col items-start justify-between mt-36 snap-start" >
         <motion.h2 
                 className="w-auto text-6xl mt-20 mb-10"
                 variants={elementAnim}

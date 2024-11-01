@@ -2,7 +2,7 @@ import AboutSection from "@/sections/About/About"
 import ContentSection from "@/sections/Content/Content"
 import HomeSection from "@/sections/Home/Home"
 import SocialSection from "@/sections/Social/Social"
-import WorksSection from "@/sections/Works/Works"
+//import WorksSection from "@/sections/Works/Works"
 
 const Home = () => {
   return (

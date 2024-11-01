@@ -82,8 +82,12 @@ const Menu = ({ foo }: { foo: () => void }) => {
             href: "#about"
         },
         {
-            name: "WORKS",
-            href: "#works"
+            name: "SOCIAL MEDIA",
+            href: "#social"
+        },
+        {
+            name: "CONTENT CREATOR",
+            href: "#content"
         },
         {
             name: "CONTACT",
