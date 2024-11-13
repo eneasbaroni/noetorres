@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { DM_Sans, Cormorant_Garamond, Newsreader } from 'next/font/google'
+import { DM_Sans, Cormorant_Garamond, Newsreader, Waiting_for_the_Sunrise } from 'next/font/google'
 import "./globals.css";
 import './borrar/ScrollDiv.css'
 import Header from "@/components/header/Header";
@@ -32,6 +32,12 @@ const neueMetana = localFont({
 	variable: '--font-neuemetana',
  })
 
+ const waitingForTheSunrise = Waiting_for_the_Sunrise({
+	subsets: ['latin'],
+	weight: '400',
+	variable: '--font-waitingforthesunrise',
+})
+
 export const metadata: Metadata = {
 	title: "Noelia Torres",
 	description: "Noelia Torres, community manager y copywriter con sólida experiencia y trayectoria en la gestion de redes sociales.",
@@ -55,7 +61,7 @@ export const metadata: Metadata = {
 		children: React.ReactNode;
 	}>) {
 		return (			
-			<html lang="es" className={`${dmSans.variable} ${cormorantGaramond.variable} ${newsreader.variable} ${neueMetana.variable} overflow-y-scroll`}>
+			<html lang="es" className={`${dmSans.variable} ${cormorantGaramond.variable} ${newsreader.variable} ${neueMetana.variable} ${waitingForTheSunrise.variable} overflow-y-scroll`}>
 				<body className="font-dm pt-10">
 					<Header/>
 					{children}

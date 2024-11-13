@@ -28,7 +28,7 @@ const SocialSection = () => {
                 initial="init"
                 whileInView="animate"
             >
-                Social Media WORKS
+                social media WORKS
             </motion.h2>
             <div className="w-full h-auto flex items-center justify-between">
                 <div className="w-1/2 flex flex-col border-b border-neutral-950/50 ">
